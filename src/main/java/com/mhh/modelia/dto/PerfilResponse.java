@@ -13,6 +13,7 @@ public class PerfilResponse {
     private String rol;
     private String direccion;
     private LocalDateTime createdAt;
+    private boolean activo;
 
     public static PerfilResponse from(Usuario u) {
         PerfilResponse dto = new PerfilResponse();
@@ -22,6 +23,7 @@ public class PerfilResponse {
         dto.setRol(u.getRol().name());
         dto.setDireccion(u.getDireccion());
         dto.setCreatedAt(u.getCreatedAt());
+        dto.setActivo(u.isActivo());
         return dto;
     }
 }
